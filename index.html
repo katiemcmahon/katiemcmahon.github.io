@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kathryn McMahon</title>
+<meta name="description" content="Kathryn McMahon, PhD Candidate in Geography at UC Santa Barbara. Research on extreme heat, humidity, air pollution, and human health.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper: #FBFAF7;
+    --ink: #23231F;
+    --ink-soft: #5B5B54;
+    --line: #E1DFD6;
+    --accent: #3E6B63;   /* quiet, muted teal-green — climate/field-work register, used sparingly */
+    --serif: 'Source Serif 4', Georgia, serif;
+    --sans: 'Source Sans 3', -apple-system, sans-serif;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:var(--serif);
+    font-size:18px;
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:var(--accent);text-decoration-thickness:1px;text-underline-offset:2px;}
+  a:hover{color:var(--ink);}
+  .wrap{max-width:700px;margin:0 auto;padding:0 24px;}
+
+  header{
+    padding:28px 0 0;
+  }
+  .nav-inner{
+    display:flex;justify-content:space-between;align-items:center;
+    border-bottom:1px solid var(--line);
+    padding-bottom:16px;
+    max-width:700px;margin:0 auto;padding-left:24px;padding-right:24px;
+    flex-wrap:wrap;gap:10px;
+  }
+  .nav-name{
+    font-family:var(--serif);font-size:19px;font-weight:600;
+    text-decoration:none;color:var(--ink);
+  }
+  .nav-links{
+    display:flex;gap:22px;list-style:none;margin:0;padding:0;
+    font-family:var(--sans);font-size:14.5px;
+  }
+  .nav-links a{color:var(--ink-soft);text-decoration:none;}
+  .nav-links a:hover{color:var(--accent);}
+
+  main{padding-top:44px;}
+
+  /* photo + intro, side by side like a masthead */
+  .intro{
+    display:flex;gap:34px;align-items:flex-start;margin-bottom:14px;
+  }
+  .photo{
+    flex:0 0 168px;
+    width:168px;height:168px;
+    border-radius:6px;
+    overflow:hidden;
+  }
+  .photo img{
+    width:100%;height:100%;object-fit:cover;display:block;
+  }
+  .intro-text h1{
+    font-family:var(--serif);font-weight:600;font-size:30px;margin:0 0 4px;
+  }
+  .intro-text .role{
+    font-family:var(--sans);font-size:15.5px;color:var(--ink-soft);margin:0 0 14px;
+  }
+  .intro-text .role a{color:var(--ink-soft);}
+
+  @media (max-width:560px){
+    .intro{flex-direction:column;align-items:flex-start;}
+    .photo{flex:0 0 140px;width:140px;height:140px;}
+  }
+
+  section{margin-top:46px;}
+  h2{
+    font-family:var(--serif);font-weight:600;font-size:22px;
+    margin:0 0 18px;
+    padding-bottom:8px;
+    border-bottom:1px solid var(--line);
+  }
+
+  p{margin:0 0 16px;}
+
+  .project{margin-bottom:26px;}
+  .project:last-child{margin-bottom:0;}
+  .project h3{
+    font-family:var(--serif);font-size:19px;font-weight:600;margin:0 0 4px;
+  }
+  .project .where{
+    font-family:var(--sans);font-size:13.5px;color:var(--accent);
+    text-transform:uppercase;letter-spacing:.03em;margin:0 0 8px;
+  }
+  .project p{margin:0;color:var(--ink);font-size:16.5px;}
+
+  .pubgroup{margin-bottom:28px;}
+  .pubgroup:last-child{margin-bottom:0;}
+  .pubgroup h3{
+    font-family:var(--sans);font-size:13px;text-transform:uppercase;letter-spacing:.04em;
+    color:var(--ink-soft);font-weight:600;margin:0 0 14px;
+  }
+  .pub{margin-bottom:14px;font-size:16.5px;}
+  .pub .authors{color:var(--ink-soft);}
+  .pub .venue{font-style:italic;color:var(--ink-soft);}
+  .pub .status{
+    font-family:var(--sans);font-size:12px;text-transform:uppercase;color:var(--accent);
+    letter-spacing:.03em;margin-left:2px;
+  }
+
+  ul.plain{margin:0;padding-left:20px;}
+  ul.plain li{margin-bottom:8px;font-size:16.5px;}
+
+  .press-item{margin-bottom:12px;font-size:16.5px;}
+  .press-item .outlet{font-family:var(--sans);font-size:13px;color:var(--ink-soft);}
+
+  .subhead{
+    font-family:var(--serif);font-size:18px;font-weight:600;
+    margin:36px 0 16px;
+  }
+
+  .service-list{margin:0;padding:0;list-style:none;}
+  .service-list li{
+    margin-bottom:10px;font-size:16.5px;
+    display:flex;gap:14px;
+  }
+  .service-list .when{
+    flex:0 0 100px;font-family:var(--sans);font-size:13.5px;color:var(--ink-soft);
+    padding-top:3px;
+  }
+
+  .freetime{margin-top:46px;}
+  .freetime img{
+    width:100%;height:auto;border-radius:6px;display:block;margin-bottom:12px;
+  }
+  .freetime p{
+    font-family:var(--serif);font-style:italic;color:var(--ink-soft);
+    font-size:16.5px;margin:0;
+  }
+
+  .cv-line{
+    display:flex;align-items:center;gap:16px;flex-wrap:wrap;
+  }
+  .btn{
+    display:inline-block;
+    font-family:var(--sans);font-size:14.5px;
+    padding:9px 18px;
+    border:1px solid var(--ink);
+    color:var(--ink);text-decoration:none;
+    border-radius:3px;
+  }
+  .btn:hover{background:var(--ink);color:var(--paper);}
+
+  footer{
+    margin-top:60px;padding:28px 0 60px;
+    border-top:1px solid var(--line);
+    font-family:var(--sans);font-size:14.5px;color:var(--ink-soft);
+  }
+  footer .links{display:flex;gap:18px;flex-wrap:wrap;margin-bottom:10px;}
+  footer .links a{color:var(--ink-soft);}
+  footer .links a:hover{color:var(--accent);}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav-inner">
+    <a class="nav-name" href="#top">Kathryn McMahon</a>
+    <ul class="nav-links">
+      <li><a href="#research">Research</a></li>
+      <li><a href="#teaching">Teaching &amp; Service</a></li>
+      <li><a href="#media">Media</a></li>
+      <li><a href="#cv">CV</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</header>
+
+<main class="wrap" id="top">
+
+  <div class="intro">
+    <div class="photo">
+      <img src="headshot.jpg" alt="Kathryn McMahon">
+    </div>
+    <div class="intro-text">
+      <h1>Kathryn McMahon</h1>
+      <p class="role">PhD Candidate, <a href="https://www.geog.ucsb.edu/" target="_blank" rel="noopener">Department of Geography</a>, University of California, Santa Barbara</p>
+      <p>I study how extreme heat, humidity, and air pollution shape human health, with a focus on prenatal exposure and child health in South Asia and sub-Saharan Africa. My work combines large secondary spatial datasets — gridded climate data, satellite-derived pollution estimates, and household health surveys — with quasi-experimental methods to isolate the causal effects of compound climate hazards. I'm increasingly interested in pairing this population-level work with individual-level, clinically grounded data, and am currently building a project with a federally qualified health center in California's Salinas Valley to study heat exposure and farmworker health.</p>
+      <p>I hold an MA in Geography from UC Santa Barbara and a BA in Geography &amp; Global Studies from the University of North Carolina at Chapel Hill. My PhD is supported by an NSF Graduate Research Fellowship and a UCSB Chancellor's Fellowship.</p>
+      <p>Email: <a href="mailto:kathryn.mcmahon@geog.ucsb.edu">kathryn.mcmahon@geog.ucsb.edu</a></p>
+    </div>
+  </div>
+
+  <section id="research">
+    <h2>Research</h2>
+
+    <div class="project">
+      <h3>Prenatal humid heat and child health</h3>
+      <p class="where">Dissertation · South Asia</p>
+      <p>Causal evidence that extreme heat combined with high humidity during pregnancy is substantially more damaging to child health outcomes than dry heat alone, with implications for child stunting as hot-humid extremes become more common under climate change.</p>
+    </div>
+
+    <div class="project">
+      <h3>Compound heat, humidity &amp; air pollution</h3>
+      <p class="where">With Ann James, Simran Koul &amp; Kathy Baylis</p>
+      <p>A high-resolution, near-global dataset linking humid heat, remotely-sensed air pollution, and infant mortality, paired with a causal machine-learning framework to estimate the compound effects of climate hazards that increasingly co-occur.</p>
+    </div>
+
+    <div class="project">
+      <h3>Extreme heat and farmworker health</h3>
+      <p class="where">With Kathy Baylis, Stuart Sweeney &amp; Chris Funk · Salinas Valley, California</p>
+      <p>In partnership with Clínica de Salud del Valle de Salinas, a federally qualified health center serving roughly 50,000 patients, this project links individual-level clinic records with fine-scale heat, humidity, and air-quality exposure to estimate how climate hazards drive clinic visitation among agricultural workers.</p>
+    </div>
+
+    <div class="subhead">Publications</div>
+
+    <div class="pubgroup">
+      <h3>Peer-Reviewed</h3>
+      <div class="pub">
+        Humid-heat shifts conceptions and increases pregnancy terminations in Nigeria<br>
+        <span class="authors">Nina Brooks, Cascade Tuholske, Kathryn McMahon, Kwaw Andam</span><br>
+        <span class="venue">Proceedings of the National Academy of Sciences</span> · <span class="status">Forthcoming</span>
+      </div>
+      <div class="pub">
+        Does humidity matter? Prenatal heat and child health in South Asia<br>
+        <span class="authors">Kathryn McMahon, Kathy Baylis, Stuart Sweeney, Chris Funk</span><br>
+        <span class="venue">Science Advances</span>, 11(51), eadx3010, 2025
+      </div>
+      <div class="pub">
+        Climate change, social vulnerability and child nutrition in South Asia<br>
+        <span class="authors">Kathryn McMahon, Clark Gray</span><br>
+        <span class="venue">Global Environmental Change</span>, 71, 102414, 2021
+      </div>
+    </div>
+
+    <div class="pubgroup">
+      <h3>Manuscripts Under Review</h3>
+      <div class="pub">
+        Will climate-induced humid heat deepen child stunting disparities in South Asia?<br>
+        <span class="authors">Kathryn McMahon, Kathy Baylis, Stuart Sweeney, Chris Funk</span><br>
+        <span class="venue">Demography</span> · <span class="status">Under review</span>
+      </div>
+    </div>
+
+    <div class="pubgroup">
+      <h3>Research In Progress</h3>
+      <div class="pub">
+        Global compound effects of humid heat and air pollution on infant mortality<br>
+        <span class="authors">Kathryn McMahon, Ann James, Simran Koul, Kathy Baylis</span>
+      </div>
+      <div class="pub">
+        Does the Social Vulnerability Index correspond with exposure to heat? A test case using California census tracts<br>
+        <span class="authors">Elizabeth Ackert, Kathryn McMahon, Gabrielle Benoit, Hannah Malak, Frank Davenport, Kathy Baylis, Shraddhanand Shukla</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="teaching">
+    <h2>Teaching &amp; Service</h2>
+    <ul class="service-list">
+      <li><span class="when">2025–2026</span><span>Instructor, Math and Statistics Boot Camp, UCSB</span></li>
+      <li><span class="when">2024</span><span>Data analysis services for the Central Coast Alliance United for a Sustainable Economy (CAUSE)</span></li>
+      <li><span class="when">2023–2024</span><span>Department of Geography Graduate Student Mentor</span></li>
+      <li><span class="when">2021–2023</span><span>Mentorship of four UCSB undergraduates — two won 1st place in Science &amp; Engineering, 2023 Library Award for Undergraduate Research</span></li>
+      <li><span class="when">2021–2024</span><span>Department of Geography Outreach Committee, UCSB</span></li>
+      <li><span class="when">2020–2021</span><span>Volunteer, North Carolina Museum of Life and Science</span></li>
+      <li><span class="when">Referee</span><span>Population and Environment</span></li>
+    </ul>
+  </section>
+
+  <section id="media">
+    <h2>Media</h2>
+    <div class="press-item">
+      <a href="https://theconversation.com/humid-heat-may-increase-the-risk-of-premature-birth-but-aspirin-could-help-282242" target="_blank" rel="noopener">Humid heat may increase the risk of premature birth. But aspirin could help</a><br>
+      <span class="outlet">The Conversation · May 2026</span>
+    </div>
+    <div class="press-item">
+      <a href="https://www.bbc.com/portuguese/articles/c5y7djlq569o" target="_blank" rel="noopener">Will climate change make us smaller?</a><br>
+      <span class="outlet">BBC News Brasil · May 2026</span>
+    </div>
+    <div class="press-item">
+      <a href="https://news.ucsb.edu/2025/022305/hot-humid-conditions-during-pregnancy-undermine-child-health-much-more-heat-alone" target="_blank" rel="noopener">Hot, humid conditions during pregnancy undermine child health much more than heat alone</a><br>
+      <span class="outlet">The Current, UCSB · December 2025</span>
+    </div>
+  </section>
+
+  <section id="cv">
+    <h2>CV</h2>
+    <p>Full curriculum vitae, including funding, awards, presentations, teaching, and service.</p>
+    <div class="cv-line">
+      <a class="btn" href="KatieMcMahon_CV.pdf">Download CV (PDF)</a>
+    </div>
+  </section>
+
+  <div class="freetime">
+    <img src="freetime.jpg" alt="Kathryn McMahon exploring the tide pools on the Santa Barbara coast at sunset">
+    <p>In my free time, you can probably find me exploring the tide pools along the Santa Barbara coast.</p>
+  </div>
+
+  <footer id="contact">
+    <div class="links">
+      <a href="mailto:kathryn.mcmahon@geog.ucsb.edu">Email</a>
+      <a href="KatieMcMahon_CV.pdf">CV</a>
+      <a href="#" title="Add your Google Scholar link">Google Scholar</a>
+      <a href="#" title="Add your LinkedIn link">LinkedIn</a>
+      <a href="#" title="Add your GitHub link">GitHub</a>
+    </div>
+    <p style="margin:0;">Department of Geography, 5817 Ellison Hall, University of California, Santa Barbara, CA 93106</p>
+  </footer>
+
+</main>
+
+</body>
+</html>
